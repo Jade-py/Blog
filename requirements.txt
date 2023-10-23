@@ -10,7 +10,6 @@ setuptools>=68.2.2
 Django>=4.2.4
 asgiref>=3.6.0
 sqlparse>=0.4.3
-mysqlclient>=2.1.1
 colorama>=0.4.6
 PyYAML>=6.0
 numpy>=1.26.1
