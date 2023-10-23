@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block blogContent %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'edit_user.css' %}">
+
+<div class="edit_user">
+<h1>Update Info</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type ="submit">Update</button>
+</form>
+</div>
+
+{% endblock blogContent %}

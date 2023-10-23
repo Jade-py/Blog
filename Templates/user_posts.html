@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block blogContent %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'user_posts.css' %}">
+
+<div class="user_posts">
+<main>
+    <article>
+        <ul>
+            {% for post in all_blogs_list %}
+                {% if post.author_id == user.username %}
+                    <li><h2><a href= "{% url 'blog' post.pk %}">{{ post.title }}</a></h2></li>
+                    <p>{{ post.body | slice:20 }}...</p>
+                    <hr>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </article>
+</main>
+</div>
+
+{% endblock blogContent %}

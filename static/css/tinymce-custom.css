@@ -1,0 +1,74 @@
+.tox-menubar{
+    background-color: #1f2224 !important;
+    border:none !important;
+}
+.tox-edit-area__iframe{
+    background-color: #1f2224 !important;
+    border:none !important;
+    color:#fff; !important
+}
+.tox-toolbar{
+    border: none !important;
+    background-color: #1f2224 !important;
+    color:#fff !important;
+}
+.tox-toolbar__group{
+border: none !important;
+}
+.tox-toolbar__primary{
+    background-color: #1f2224 !important;
+    border: none !important;
+}
+.tox-statusbar__path{
+    background-color: #1f2224 !important;
+    color:#fff !important;
+    font-color: #ffffff !important;
+}
+.tox-statusbar__wordcount{
+    background-color: #1f2224 !important;
+    color:#fff !important;
+    font-color: #ffffff !important;
+}
+.tox-statusbar__text-container{
+    background-color: #1f2224 !important;
+    color:#fff !important;
+    font-color: #ffffff !important;
+}
+.tox-statusbar a{
+    color:#fff !important;
+}
+.tox-statusbar{
+    background-color: #1f2224 !important;
+    border: none !important;
+    font-color: #ffffff !important;
+}
+.my-tinymce-editor {
+  background-color: gray;
+   color:#fff !important;/* Change the background color to grey */
+}
+.tox-mbtn__select-label{
+background-color: #1f2224 !important;
+    color:#fff !important;
+}
+.tox-mbtn__select-label:hover{
+background-color: #fff !important;
+    color:#1f2224 !important;
+}
+.tox-tinymce{
+border: none !important;
+}
+svg{
+    fill: #fff !important ;
+}
+svg:hover{
+    fill: #1f2224 !important ;
+}
+.mce-content-body{
+    color:#fff !important;
+}
+.tox{
+    color:black !important;
+}
+.tox-collection--list{
+    color:black !important;
+}

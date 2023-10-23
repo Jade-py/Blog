@@ -1,0 +1,151 @@
+.delete_blog{
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 20px;
+    border: 1px solid #0000009c;
+    border-radius: 5px;
+    background-color: #0000009c;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.delete_blog h1{
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.delete_blog form{
+    margin-top: 5%;
+}
+
+.delete_blog input[type=text], input[type=email]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    box-sizing: border-box;
+    background-color: #0000;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+textarea{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    box-sizing: border-box;
+    background-color: #0000;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+    height: 50px;
+}
+
+textarea:hover{
+    border-bottom: 2px solid gray;
+}
+
+.delete_blog input[type=text]:hover, input[type=email]:hover{
+    border-bottom: 2px solid gray;
+}
+
+.delete_blog input:hover{
+    border-bottom: 2px solid gray;
+}
+
+
+.delete_blog input[type =submit]{
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    border: #fff solid 2px;
+}
+
+.delete_blog input[type =submit]:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .delete_blog{
+        margin-top: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .delete_blog h1{
+        font-size: 20px;
+    }
+
+    .delete_blog h3{
+        font-size: 15px;
+    }
+
+    .delete_blog form{
+        margin-top: 5%;
+    }
+
+    .delete_blog input[type=text], input[type=email]{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    textarea{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+        height: 50px;
+    }
+
+    textarea:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .delete_blog input[type=text]:hover, input[type=email]:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .delete_blog input:hover{
+        border-bottom: 2px solid gray;
+    }
+    
+    .delete_blog input[type =submit]{
+        background-color: #000;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        border: #fff solid 2px;
+    }
+    
+}

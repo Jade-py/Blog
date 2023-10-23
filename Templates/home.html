@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHome</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Clicker+Script&family=Croissant+One&family=Days+One&family=Handlee&family=Indie+Flower&family=Lilita+One&family=Lobster&family=Love+Ya+Like+A+Sister&family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@600;900&family=Nothing+You+Could+Do&family=Oleo+Script&family=Open+Sans:wght@600&family=Oregano&family=Patua+One&family=Poppins:wght@200;300;400;600;700&family=Russo+One&family=Sriracha&family=Stardos+Stencil:wght@400;700&family=Tektur&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecb170e391.js" crossorigin="anonymous"></script>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #000;
+    overflow: hidden;
+    
+    
+  }
+  a{
+  text-decoration: none;
+  color: black;
+  }
+  .Main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .Main-Intro{
+    
+    
+    
+   
+    width: fit-content;
+  }
+  .MyIntroA{
+    
+    display: flex;
+    
+    color: #fff;
+  }
+  .MyIntroJ{
+    
+    display: flex;
+   
+    color: #fff;
+  }
+  .gear{
+    color: #fff;
+   padding-left: 100px;
+   position: relative;
+    
+  }
+  .gear i{
+    margin: 0;
+    padding: 0;
+  }
+  .middle-gear-no{
+    padding: 0;
+    margin: 0;
+    padding-left: 25px;
+  }
+  .middle-gear{
+    position: absolute;
+    top:60px;
+  }
+  .bottom-gear{
+    position: absolute;
+    top: 75px;
+  }
+  .Work{
+    width: 100%;
+    padding-top: 10%;
+  }
+  .MyIntroA p{
+    line-height: 20px;
+    text-align: center;
+    padding-left: 20px;
+    font-family: 'Sriracha', cursive;
+    font-size: 30px;
+  }
+  .MyIntroJ p{
+    text-align: center;
+    padding-left: 40px;
+    line-height: 20px;
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 30px;
+  }
+  .MyIntroA img{
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 10% 10%;
+  }
+  .MyIntroJ img{
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 10% 30%;
+  }
+  .left{
+    flex: 0 0 25%;
+    max-width: 25%;
+    background-color: #000;
+  }
+  .Main-Img{
+    width: 100%;
+    height: 100%;
+    
+  }
+  .timer-container {
+    width: 25%;
+    height: 100%;
+    background-color: #353944;
+    /* transition: all 0.5s ease-in-out; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-size: 40px;
+    position: absolute;
+    padding-right: 100px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.Time-content{
+    position: absolute;
+    font-family: 'Days One', sans-serif;
+    top: 30%;
+    left: 12%;
+}
+.timer-number {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    /* position: absolute;
+    font-family: 'Days One', sans-serif;
+    top: 30%;
+    left: 20%; */
+}
+.left p{
+    color: #fff;
+
+}
+.small-Home{
+    width: 150px;
+    height: 100px;
+}
+.small-Home-logo{
+  width: 100px;
+  height: 100px;
+}
+.firsttop{
+ position: absolute;
+ top: 40px;
+ left: 40px;
+}
+.secondtop{
+    position: absolute;
+    top: 100px;
+    left: 85%;
+}
+.real-Logo{
+  position: absolute;
+    top: 70px;
+    left: 85%;
+    
+}
+.firstbottom{
+    position: absolute;
+    top: 500px;
+    left: 50%;
+}
+.hidden-content {
+    /* display: none; */
+
+    text-align: center;
+    color: #fff;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    left: -1000px;
+    width: 30%;
+    height: 100%;
+
+}
+
+.hidden-content h1 {
+    font-size: 36px;
+}
+
+.hidden-content p {
+    font-size: 18px;
+}
+
+  .right{
+    flex: 0 0 75%;
+    max-width: 75%;
+    background-color: #000;
+  }
+  .right .top{
+    width: 100%;
+    height: 28%;
+    /* background-color: #fff; */
+    position: relative;
+  }
+.division{
+  border-right: 2px solid #949598;
+}
+.nav{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+}
+.nav a button{
+  background-color: transparent;
+  color: #e9ecef;
+  border: none;
+  /* border-bottom: 2px solid #ced4da; */
+  /* margin-left: 20px; */
+  padding: 5px 20px;
+  
+}
+.nav a button:hover{
+  background-color: #495057;
+}
+
+.button{
+  transition: all 0.5s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+
+
+
+
+
+  .Company-Name h1{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    color: #fff;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 70px;
+    z-index: 10;
+  }
+  .ourIntro{
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    /* animation: fadeOut 6s forwards; */
+    /* animation: disappear 2s forwards; */
+  }
+  /* .ourIntro2{
+    position: absolute;
+    right: 7%;
+    top: -400px;
+    height: 100px;
+    width:500px;
+    display: flex;
+    gap: 20px;
+    
+    
+    animation: disappear 4s forwards 1s;
+    background-color: #000;
+  } */
+  @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes disappear {
+  to {
+      opacity: 1;
+      transform: translateY(400px);
+  }
+}
+  
+  .right .bottom{
+    width: 100%;
+    height: 32%;
+    padding-left: 40px;
+    padding-top: 0px;
+    display: flex;
+  }
+  .bottom h1{
+    color: #fff;
+    /* font-family: 'Days One', sans-serif; */
+    font-family: 'Oregano';
+    font-size: 25px;
+  }
+  .bottom-quote-left{
+    flex:  0 0 75%;
+    max-width: 75%;
+    height: 100%;
+    padding-left: 20px;
+    
+  }
+  .bottom-quote-right{
+    flex: 0 0 45%;
+    max-width: 45%;
+    height: 100%;
+    padding-top: 40px;
+    padding-right: 40px;
+  }
+  .bottom-top{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    color: #adb5bd;
+  }
+  .bottom-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    color: #adb5bd;
+  }
+.bottom-quote-right  h3{
+  
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-family: 'Tektur', cursive;
+    /* padding-top: 40px; */
+    color: #adb5bd;
+  }
+
+  /* ///////////////////////////////////// */
+  .bottom-scroll{
+    width: 96%;
+    height: 45%;
+    float: left;
+    margin: 0px 0px;
+    /* border: 2px solid #adb5bd; */
+    display: flex;
+    animation: disappear1 2s forwards 1.2s;
+    position: absolute;
+    right: -2000px;
+    /* display: none; */
+  }
+  @keyframes disappear1 {
+    to {
+        opacity: 1;
+        transform: translateX(-1750px);
+    }
+  }
+  .popular h1{
+    position: absolute;
+    top: 30px;
+    left: 69%;
+    color: #adb5bd;
+    font-size: 18px;
+  }
+  .Take{
+    flex: 0 0 10%;
+    max-width:10%;
+    /* background-color: #fff; */
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  .Take i{
+    padding-top: 10px;
+    padding-left: 50px;
+  }
+  
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(15px, 0px); }
+  100%   { transform: translate(0, -0px); }   
+}
+  .blogs{
+    flex: 0 0 75%;
+    max-width: 75%;
+    display: flex;
+    /* animation: disapper1 5s forwards 1s; */
+    /* background-color: #adb5bd; */
+  }
+  .blog-list{
+    display: flex;
+    padding-left: 20px;
+    overflow-x: scroll;
+    
+  }
+ 
+  .blog-list::-webkit-scrollbar {
+    display: none;
+}
+  .Random-Blogs{
+    width: 50000px;
+    padding-top: 50px;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+    /* overflow-x: scroll; */
+
+  }
+.comment{
+    width: 400px;
+    min-height: 80%;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: #343a40;
+    color: #adb5bd;
+    /* border: 1px solid #adb5bd; */
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 15px -9px #000000; 
+box-shadow: 0px 0px 15px -9px #000000;
+}
+.comment-left{
+    flex: 0 0 15%;
+    max-width: 15%;
+    padding: 2%;
+}
+.comment-left img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    /* margin: 0px auto; */
+}
+.comment-right{
+    padding: 20px 20px 0 20px;
+    margin-left: 10px;
+    width: 100%;
+    height: fit-content;
+    
+}
+.comment-right-top{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.comment-right-top h1{
+    font-size: 25px;
+<!--    padding-bottom: 10px;-->
+    color:#e9ecef;
+     line-height: 15px;
+}
+
+.comment-right-top p{
+    font-size: 16px;
+<!--    padding-bottom: 2px;-->
+     line-height: 10px;
+    color: #ced4da;
+}
+.comment-right-matter{
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+    padding: 0 20px 0 0px;
+    line-height: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="Main">
+        <div class="left">
+            <div class="timer-container">
+                <!-- <img class="small-Home firsttop" src="home-small1.png" alt=""> -->
+                <!-- <img class="small-Home secondtop" src="home-small2.png" alt=""> -->
+                <div class="Time-content">
+                    <!--  -->
+                    <!-- <div class="timer-number" id="timer" style="margin-top: 40px;margin-left: 40px;">85%</div> -->
+                    <p style="text-align: center;margin: 0; margin-left: 40px;">Loading...</p>
+                    <div class="timer-number" id="timer" style="margin: 0; margin-left: 40px;">85%</div>
+                    <div class="gear">
+                        <i class="fa-solid fa-gear fa-spin top-gear" style="color: #dee2e6; "></i><br>
+                        <div class="middle-gear-no">
+                            <i class="fas fa-cog fa-spin fa-spin-reverse middle-gear fa-xl" style=""></i><br>
+                        </div>
+                        
+                        <i class="fas fa-cog fa-spin bottom-gear" style="color: #dee2e6;"></i>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- <img class="small-Home firstbottom" src="home-small3.png" alt=""> -->
+            </div>
+            <div class="hidden-content" id="content">
+                <!-- Your content to display after the timer completes -->
+                <img class="Main-Img" src="{% static 'css/homeleftSs.png' %}" alt="">
+                <img class=" small-Home-logo real-Logo" src="{% static 'css/1.jpeg' %}" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                {% if user.is_authenticated %}
+                <div class="nav">
+                    <div class="">
+                        <a href="{% url 'user' %}"><button  class="button btn-one" type="button"><span
+                                style="color: #e9ecef; font-size: 20px;">{{ user }}</span></button></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="nav">
+                    <div class="division">
+                        <a href="{% url 'login' %}"><button class="button btn-one"  type="button"><span
+                                style="color: #e9ecef;">LogIn</span></button></a>
+                    </div>
+                    <!-- <p>\</p> -->
+                    <div class="">
+                        <a href="{% url 'signup' %}"><button  class="button btn-one" type="button"><span
+                                style="color: #e9ecef;">SignUp</span></button></a>
+
+                    </div>
+                </div>
+                {% endif %}
+                <div class="Company-Name">
+                    <h1>The Phantasmagoria</h1>
+                </div>
+                <div class="ourIntro">
+                    <!-- <div class="MyIntroA">
+                        <img src="ourIntro1.png" alt="">
+                        <div class="Work">
+                            <p>Ashutosh Agnihotri</p>
+                        <p>Frontend</p>
+                        </div>
+                        
+                    </div>
+                    <div class="MyIntroJ">
+                        <img src="ourIntro1.png" alt="">
+                        <div class="Work">
+                            <p>Justin George</p>
+                        <p>Backend</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="ourIntro2">
+                    
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-quote-left">
+                    <h1><span class="typing"></span></h1>
+                    <h1><span class="typing1"></span></h1>
+                    <h1><span class="typing3"></span></h1>
+                </div>
+                <!-- <div class="bottom-quote-right">
+                    <h3>Where Minds Emerge Through</h3>
+                    <h3>Written Reflectins</h3>
+                </div> -->
+            </div>
+            <div class="bottom-scroll">
+                <div class="popular">
+                    <a href="{% url 'blogs' %}"><h1>Top Picks for You</h1></a>
+                </div>
+                
+                <div class="Take floating">
+                    <a href="{% url 'blogs' %}" style="color: transparent;"><h3 style="border: none;">&ensp;&ensp;<i
+                            class="fa-solid fa-angles-left" style="color: #e9ecef;"></i></h3></a>
+                </div>
+                <div class="blogs">
+                    <div class="blog-list">
+                        <div class="Random-Blogs">
+                              <!-- ////////////// -->
+                            {% for blog in all_blogs_list %}
+                            <a href="{% url 'blog' blog.pk %}">
+                              <div class="comment">
+<!--                                <div class="comment-left">-->
+<!--                                </div>-->
+                                <div class="comment-right">
+                                  <div class="comment-right-top">
+                                    <div style="padding: 0; margin: 0">
+                                      <h1 >{{ blog.title }}</h1>
+                                      <p>{{ blog.date }}</p>
+                                    </div>
+                                  </div>
+                                  <div class="comment-right-matter">
+                                    <p>
+                                        {{ blog.body | striptags | slice:"115" }}...<span
+                                            style="color:#999999; font-size:0.9rem">   read more</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const timer = document.getElementById("timer");
+    const timerDiv = document.querySelector(".timer-container");
+    const content = document.getElementById("content");
+    const contentDiv = document.querySelector(".hidden-content")
+    const startPercentage = 85;
+    const endPercentage = 99;
+    const duration = 1800; // 3 seconds in milliseconds
+
+    let startTime;
+
+    function animateTimer() {
+        const currentTime = Date.now();
+        const elapsedTime = currentTime - startTime;
+        const percentage = (elapsedTime / duration) * (endPercentage - startPercentage) + startPercentage;
+
+        if (percentage <= endPercentage) {
+            timer.textContent = percentage.toFixed(0) + "%";
+            requestAnimationFrame(animateTimer);
+        } else {
+            // Timer completed, hide the timer and show the content
+            // timer.style.display = "none";
+            
+            timerDiv.style.left = "-400px"
+            
+            // content.style.display = "block";
+            content.style.left = "-78px";
+            
+            
+        }
+    }
+
+    startTime = Date.now();
+    animateTimer();
+});
+
+var typed = new Typed(".typing",{
+    strings:["","The term Phantasmagoria originates from the greek words Phantasm - meaning illusions or fantasies, and Agoria - meaning Collection. <br>That is what this platform aims to be, a place that's a collection of all the vivid intrusive thoughts or ideas in one's conciousness. Expressing my innate feelings to a judgement free void of naive opinions was the motive behind creation of this platform. <br>Hope that this place becomes a refuge to your wildest stories and deepest feelings as it has been for me<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ~Jade-py "],
+    typeSpeed:1,
+    BackSpeed:80,
+    loop:false
+})
+
+
+
+
+
+    </script>
+</body>
+</html>

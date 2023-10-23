@@ -1,0 +1,152 @@
+.new_blog{
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 20px;
+    border: 1px solid #0000009c;
+    border-radius: 5px;
+    background-color: #0000009c;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.new_blog h1{
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.new_blog form{
+    margin-top: 5%;
+}
+
+.new_blog input[type=text], input[type=textarea]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    box-sizing: border-box;
+    background-color: #0000;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+textarea{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    box-sizing: border-box;
+    background-color: #0000;
+    font-family: Arial;
+    font-size: 15px;
+    color: whitesmoke;
+    height: 50px;
+}
+
+textarea:hover{
+    border-bottom: 2px solid gray;
+}
+
+.new_blog input[type=text]:hover, input[type=textarea]:hover{
+    border-bottom: 2px solid gray;
+}
+
+.new_blog input:hover{
+    border-bottom: 2px solid gray;
+}
+
+.new_blog input[type =submit]{
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.new_blog input[type = submit]:hover{
+    background-color: #000;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .new_blog{
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 20px;
+        border: 1px solid #0000009c;
+        border-radius: 5px;
+        background-color: #0000009c;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    .new_blog h1{
+        text-align: center;
+        font-size: 30px;
+        color: whitesmoke;
+    }
+
+    .new_blog form{
+        margin-top: 5%;
+    }
+
+    .new_blog input[type=text], input[type=textarea]{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    textarea{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+        height: 50px;
+    }
+
+    textarea:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .new_blog input[type=text]:hover, input[type=textarea]:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .new_blog input:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .new_blog input[type =submit]{
+        background-color: #000;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+}

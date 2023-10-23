@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 600px){
+    nav{
+        display: block;
+    }
+    nav a{
+        float: none;
+    }
+    nav ul{
+        display: block;
+    }
+    nav .logo{
+        font-size: 1px;
+    }
+    header{
+        width: auto;
+    }
+}

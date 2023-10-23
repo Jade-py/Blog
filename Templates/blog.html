@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <link rel="stylesheet" href="styles/EachBlog.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Clicker+Script&family=Croissant+One&family=Days+One&family=Indie+Flower&family=Lilita+One&family=Lobster&family=Love+Ya+Like+A+Sister&family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@600;900&family=Nothing+You+Could+Do&family=Oleo+Script&family=Open+Sans:wght@600&family=Patua+One&family=Poppins:wght@200;300;400;600;700&family=Russo+One&family=Sriracha&family=Stardos+Stencil:wght@400;700&family=Tektur&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ecb170e391.js" crossorigin="anonymous"></script>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #000;
+    overflow: hidden;
+
+
+  }
+  a{
+  text-decoration: none;
+  color: black;
+  }
+  .Main{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #000;
+
+  }
+  .Nav{
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* border-bottom: 2px solid #495057; */
+  }
+  .Navy{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 10px;
+  }
+  .Navy p{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    /* border-bottom: 2px solid #495057; */
+  }
+  .Navy-justin{
+    display: flex;
+    /* gap: 20px; */
+    /* justify-content: center;
+    align-items: center; */
+    padding-top: 10px;
+    padding: 0 10px 0 10px;
+
+  }
+  .navy-justin-one{
+    padding: 0px 20px;
+    height: 33px;
+    border-left: 2px solid #adb5bd;
+    border-right: 2px solid #adb5bd;
+  }
+  .navy-justin-one1{
+    padding: 0px 20px;
+    height: 33px;
+    border-left: 2px solid #adb5bd;
+<!--    border-right: 2px solid #adb5bd;-->
+  }
+  .Navy-justin a{
+    text-decoration: none;
+  }
+  .Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.Logo h1{
+    /* position: absolute; */
+    padding-left: 50px;
+    color: #fff;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 40px;
+    z-index: 10;
+}
+.Main-Screen{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+.Blogs-Content{
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin-left: 30px;
+    height: 70%;
+    /* height: 100%; */
+    /* background-color: #343a40; */
+    /* margin: 0 auto; */
+
+}
+
+
+.All-Blogs{
+  /* height: 1000px; */
+  width: 100%;
+  padding-bottom: 100px;
+
+  /* background-color: #343a40; */
+}
+.All-Blogs a{
+  text-decoration: none;
+}
+.comment{
+    width: 99%;
+    min-height: 80vh;
+    max-height: 80vh;
+
+    height: fit-content;
+    border-radius: 20px;
+    background-color: #343a40;
+    color: #adb5bd;
+    cursor: pointer;
+    /* border: 2px solid #6c757d; */
+    /* border: 1px solid #adb5bd; */
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* padding-bottom: 50px; */
+    -webkit-box-shadow: 0px 0px 15px -9px #000000;
+  box-shadow: 0px 0px 15px -9px #000000;
+  }
+.comment-left{
+  flex: 0 0 10%;
+  max-width: 10%;
+  padding: 2%;
+}
+.comment-left img{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  /* margin: 0px auto; */
+}
+.comment-right{
+  padding: 20px 20px 0 20px;
+  margin-left: 20px;
+  width: 100%;
+  height: fit-content;
+
+}
+.comment-right-top{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+
+}
+.HeadPart{
+    width: 100%;
+    height: 50px;
+    }
+    .HeadPart h1{
+
+      padding: 0;
+      margin: 0;
+
+    }
+    .comment-right-top{
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      width: 100%;
+
+    }
+.comment-right-top h1{
+  font-size: 1rem;
+  line-height: 20px;
+}
+.comment-right-top p{
+  font-size: 0.8rem;
+  line-height: 25px;
+  color: #949598;
+}
+.comment-right-matter{
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+    padding: 0 20px 0 0px;
+    line-height: 20px;
+    min-height: 200px;
+    max-height: 55vh;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    height: fit-content;
+    overflow-y: auto;
+    color: #ced4da;
+  }
+  .comment-right-matter::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .comment-right-matter::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+  }
+  .comment-right-matter::-webkit-scrollbar-track {
+    background-color: #343a40;
+    border: 1px solid #343434;
+  }
+.OtherComments{
+    flex: 0 0 27%;
+    max-width: 27%;
+    min-height: 200px;
+    max-height: 80%;
+    height: fit-content;
+    height: 80%;
+    padding: 20px 5px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #343a40;
+    margin-right: 30px;
+    position: relative;
+    overflow-y: auto;
+
+
+}
+
+.OtherComments::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+  }
+  .OtherComments::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 5px;
+  }
+  .OtherComments::-webkit-scrollbar-track {
+    background-color: #343a40;
+    border: 1px solid #343434;
+  }
+/* //////////// */
+.OtherCommentsC{
+    flex: 0 0 27%;
+    max-width: 27%;
+    /* min-height: 200px; */
+    /* max-height: 80%; */
+
+    /* height: fit-content; */
+    height: 80%;
+    padding: 0px 5px;
+    margin-top: 20px;
+    border-radius: 20px;
+    /* background-color: #343a40; */
+    margin-right: 30px;
+    position: relative;
+    /* overflow-y: auto; */
+
+
+}
+.bottomComments{
+  width: 100%;
+  max-height: 90%;
+  /* height: fit-content; */
+  position: absolute;
+  bottom: 40px;
+  overflow-y: auto;
+  /* background-color:#fff ; */
+}
+.bottomComments::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+  }
+  .bottomComments::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 5px;
+  }
+  .bottomComments::-webkit-scrollbar-track {
+    background-color: #343a40;
+    border: 1px solid #343434;
+  }
+/*  */
+
+.commentC{
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: #343a40;
+    color: #adb5bd;
+    /* border: 1px solid #adb5bd; */
+    display: flex;
+    /* margin-top: 20px; */
+    margin-bottom: 2px;
+
+}
+
+.commentC-left{
+    flex: 0 0 10%;
+    max-width: 10%;
+    padding: 2%;
+}
+.commentC-left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* margin: 0px auto; */
+}
+.commentC-right{
+    padding: 20px 20px 0 20px;
+    margin-left: 20px;
+    width: 100%;
+    height: fit-content;
+
+}
+.commentC-right-top{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.commentC-right-top h1{
+    font-size: 1rem;
+    line-height: 10px;
+}
+.commentC-right-top p{
+    font-size: 0.8rem;
+    line-height: 10px;
+    color: #949598;
+}
+.commentC-right-matter{
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+    padding: 0 20px 0 0px;
+    line-height: 20px;
+}
+.AddComment{
+    color: #fff;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0%;
+    right: 10%;
+
+}
+.myMatter{
+    border-bottom: 3px solid #949598;
+    width: 120%;
+    display: flex;
+}
+.AddComment .AddY{
+    margin-right: 20px;
+    border: none;
+    width: 90%;
+    background-color: #000;
+    color: #e9ecef;
+    padding: 0 10px;
+
+}
+input::placeholder{
+    color: #adb5bd;
+}
+input:focus{
+    outline: none;
+}
+.AddComment i{
+    padding-top: 10px;
+}
+
+</style>
+</head>
+<body>
+    <div class="Main">
+        <div class="Nav">
+            <div class="Logo">
+                <h1>The Phantasmagoria</h1>
+            </div>
+            {% if user.is_authenticated %}
+                <div class="Navy">
+                    <div class="Navy-justin">
+                        <a href="{% url 'home' %}"><p style="padding-top:12px;">Home</p></a>
+                    </div>
+
+                    <div class="Navy-justin">
+                        <div class="navy-justin-one1">
+                            <a
+                                    href="{% url 'user' %}"><p style="padding-top:2px;margin:0px;font-size:17px;">
+                                {{user}}</p></a>
+                        </div>
+
+                    </div>
+                </div>
+            {% else %}
+                <div class="Navy">
+                    <div class="Navy-justin">
+                        <a href="{% url 'home' %}"><p>Home</p></a>
+                    </div>
+
+                    <div class="Navy-justin">
+                        <div class="navy-justin-one">
+                            <a href="{% url 'login' %}"><p>LogIn</p></a>
+                        </div>
+
+                        <a style="padding-left: 10px;" href="{% url 'signup' %}"><p>SignUp</p></a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="Main-Screen">
+            <div class="Blogs-Content">
+                <div class="All-Blogs">
+                        <div class="comment">
+                          <div class="comment-right">
+                            <div class="HeadPart">
+                                <h1>{{ post.title }}</h1>
+                            </div>
+                            <div class="comment-right-top">
+                              <div style="padding: 0; margin: 0;padding-top: 10px;">
+                                <h1 style="font-size: 25px; color: #adb5bd;">{{ post.author }}</h1>
+                                <p>{{ post.date }}</p>
+                              </div>
+
+
+                            </div>
+                            <div class="comment-right-matter">
+                              <p>
+                                  {{ post.body | safe }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            </div>
+
+        </div>
+        <div class="OtherCommentsC">
+            <div class="bottomComments">
+              <div class="upper">
+                  {% if comments %}
+                  {% for comment in comments %}
+                  <div class="commentC">
+                    <div class="commentC-right">
+                      <div class="commentC-right-top">
+                        <div style="padding: 0; margin: 0">
+                          <h1>{{ comment.commenter }}</h1>
+                          <p>{{ comment.date_commented }}</p>
+                        </div>
+                      </div>
+                      <div class="commentC-right-matter">
+                        <p>
+                            {{ comment.comment }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  {% else %}
+                  <div class="centerMy"
+                         style="margin-bottom:60%;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items-center;">
+                        <p style="color: #fff; font-size:20px;text-align:center;margin:0;padding:0;">No comments yet</p>
+                        <p style="color: white; font-size:20px;text-align:center;margin:0;padding:0;">Be the first
+                            one to comment
+                            </p>
+                    </div>
+                  {% endif %}
+                </div>
+            </div>
+            <div class="AddComment">
+              <div class="">
+                <form class="myMatter" method="post">
+                    {% csrf_token %}
+                  <input class="AddY" type="text" name="comment" id="" placeholder="Add Comment">
+                    <button type="submit"
+                            style="background:transparent;border:none;"><i class="fa-solid fa-arrow-right fa-lg"
+                                                                           style="color:#fff"
+                    ></i></button>
+
+                </form>
+
+              </div>
+            </div>
+
+        </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

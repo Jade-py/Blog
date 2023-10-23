@@ -1,0 +1,131 @@
+.home{
+    background-color: #0000009c;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    min-height: 400px;
+    overflow: auto;
+}
+
+.home hr{
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.home h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home p{
+    font-size: 17px;
+    color: #fff;
+}
+
+.home h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.home ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .home{
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 20px;
+        border: 1px solid #0000009c;
+        border-radius: 5px;
+        background-color: #0000009c;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    .home h1{
+        text-align: center;
+        font-size: 30px;
+        color: whitesmoke;
+    }
+
+    .home form{
+        margin-top: 5%;
+    }
+
+    .home input[type=text], input[type=email]{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    textarea{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        box-sizing: border-box;
+        background-color: #0000;
+        font-family: Arial;
+        font-size: 15px;
+        color: whitesmoke;
+        height: 50px;
+    }
+
+    textarea:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .home input[type=text]:hover, input[type=email]:hover{
+        border-bottom: 2px solid gray;
+    }
+
+    .home input[type=submit]{
+        width: 100%;
+        background-color: #0000;
+        color: whitesmoke;
+        border: 2px solid whitesmoke;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-family: Arial;
+        cursor: pointer;
+    }
+
+    .home input[type=submit]:hover{
+        background-color: whitesmoke;
+        color: #000;
+    }
+}
