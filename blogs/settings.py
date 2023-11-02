@@ -1,4 +1,5 @@
 import os
+import pymysql
 from pathlib import Path
 from environs import Env
 
@@ -30,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'users',
     'blog',
+    'users',
     'tinymce',
 ]
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -88,6 +89,7 @@ DATABASES = {
     }
 }
 
+pymysql.install_as_MySQLdb()
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
