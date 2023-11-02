@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blogs.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS =['https://blog-production-b6b2.up.railway.app/']
+CSRF_TRUSTED_ORIGINS =['https://blog-production-b6b2.up.railway.app']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
