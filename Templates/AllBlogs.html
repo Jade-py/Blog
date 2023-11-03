@@ -255,7 +255,7 @@ box-shadow: 0px 0px 15px -9px #000000;
             <div class="All-Blogs">
 
                 {% for blogs in all_blogs_list %}
-                  <a href="{% url 'blog' blogs.pk %}">
+                  <a href="{% url 'blog' slug=blogs.slug %}">
                     <div class="comment">
                       <div class="comment-right">
                         <div class="comment-right-top">

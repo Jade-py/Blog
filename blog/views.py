@@ -37,11 +37,8 @@ class blog_post(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        post = self.object  # Get the Post object being displayed
-
-        # Fetch related comments for the post
+        post = self.object
         comments = Comments.objects.filter(post_pk=post)
-
         context['comments'] = comments
         return context
 

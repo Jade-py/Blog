@@ -667,14 +667,18 @@ box-shadow: 0px 0px 15px -9px #000000;
                         <div class="Random-Blogs">
                               <!-- ////////////// -->
                             {% for blog in all_blogs_list %}
-                            <a href="{% url 'blog' blog.pk %}">
+                            <a href="{% url 'blog' slug=blog.slug %}">
                               <div class="comment">
 <!--                                <div class="comment-left">-->
 <!--                                </div>-->
                                 <div class="comment-right">
                                   <div class="comment-right-top">
                                     <div style="padding: 0; margin: 0">
-                                      <h1 >{{ blog.title }}</h1>
+                                        {% if blog.title|length > 25 %}
+                                      <h1 >{{ blog.title | slice:":25" }}...</h1>
+                                        {% else %}
+                                        <h1 >{{ blog.title }}</h1>
+                                        {% endif %}
                                       <p>{{ blog.date }}</p>
                                     </div>
                                   </div>
