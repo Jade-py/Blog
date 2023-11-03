@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils.text import slugify
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy, reverse
 from django.views.generic import *
@@ -84,6 +85,8 @@ class newBlogView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        title = form.cleaned_data['title']
+        form.instance.slug = slugify(title)
         return super().form_valid(form)
 
 
@@ -128,7 +131,8 @@ def dashboard_view(request):
             post = Post(
                 title=form.cleaned_data['title'],
                 body=form.cleaned_data['body'],
-                author=request.user
+                author=request.user,
+                slug=slugify(form.cleaned_data['title'])
             )
             post.save()
         else:
