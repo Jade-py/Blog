@@ -14,7 +14,7 @@ class Post(models.Model):
     body = HTMLField()
     date = models.DateField(auto_now_add=True)
     access_count = models.IntegerField(default=0)
-    slug = models.SlugField(unique=True, default="")
+    slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):
         base = slugify(self.title)
