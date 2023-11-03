@@ -328,7 +328,7 @@ input:focus{
                                         <p>{{ blog.date }}</p>
                                     </div>
                                     <div class="delete">
-                                        <a href="{% url 'delete' blog.pk %}">
+                                        <a href="{% url 'delete' slug=blog.slug %}">
                                             <i class="fa-solid fa-trash-can" style="color: #ffffff;"></i>
                                         </a>
                                     </div>
