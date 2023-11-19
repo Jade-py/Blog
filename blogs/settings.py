@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'blog-phantasmagoria.azurewebsites.net']
 
 
 # Application definition
@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blogs.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS =['https://blog-production-b6b2.up.railway.app']
+CSRF_TRUSTED_ORIGINS =['https://blog-phantasmagoria.azurewebsites.net']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -78,12 +78,11 @@ CSRF_TRUSTED_ORIGINS =['https://blog-production-b6b2.up.railway.app']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'URL': os.getenv('MYSQL_URL'),
-        'NAME': os.getenv('MYSQLDATABASE'),
-        'USER': os.getenv('MYSQLUSER'),
-        'PASSWORD': os.getenv('MYSQLPASSWORD'),
-        'HOST': os.getenv('MYSQLHOST'),
-        'PORT': os.getenv('MYSQLPORT'),
+        'NAME': os.getenv('AZURE_MYSQL_NAME'),
+        'USER': os.getenv('AZURE_MYSQL_USER'),
+        'PASSWORD': os.getenv('AZURE_MYSQL_PASSWORD'),
+        'HOST': os.getenv('AZURE_MYSQL_HOST'),
+        'PORT': os.getenv('AZURE_MYSQL_PORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
