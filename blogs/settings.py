@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'users',
     'tinymce',
 ]
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
