@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'blog-phantasmagoria'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32309043A62D440BBCB6620582F9CF94 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8004A7EB4A554F448D510F0B8FE9A3FF }}
