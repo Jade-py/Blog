@@ -83,7 +83,6 @@ DATABASES = {
         'USER': os.getenv('AZURE_MYSQL_USER'),
         'PASSWORD': os.getenv('AZURE_MYSQL_PASSWORD'),
         'HOST': os.getenv('AZURE_MYSQL_HOST'),
-        'PORT': os.getenv('AZURE_MYSQL_PORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
