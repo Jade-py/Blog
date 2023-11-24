@@ -49,11 +49,11 @@ class blog_post(DetailView):
         self.object.save()
         return super().get(self, request, *args, **kwargs)
 
-    def post(self, request, pk):
+    def post(self, request, slug):
         if request.user.is_authenticated:
             if request.method == 'POST':
                 comment = request.POST.get('comment')
-                post = get_object_or_404(Post, pk=pk)
+                post = get_object_or_404(Post, slug=slug)
                 comment = Comments(
                     post_pk=post,
                     comment=comment,
@@ -66,7 +66,7 @@ class blog_post(DetailView):
         else:
             login_url = reverse('login') + f'?next={reverse("blog", args=[pk])}'
             return redirect(login_url)
-        return redirect('blog', pk=pk)
+        return redirect('blog', slug=slug)
 
 
 class homeView(ListView):
