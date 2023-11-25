@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'blog-phantasmagoria.azurewebsites.net', 'phantasmagoria.jadepy.tech']
 
@@ -154,9 +154,9 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'DoNotReply@jadepy.tech'
-EMAIL_HOST = 'smtp.jadepy.tech'
-EMAIL_HOST_USER = 'https://email-communication-azure.india.communication.azure.com/'
-EMAIL_HOST_PASSWORD = 'Y6FqCiNY8qgkmViElXdKcc2wydn0JyWsWLHxOYR9zXLpbze52b+K6mFYZqhuqQ+vNeCuS4BANG4L5rHA5nPD0w=='
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
