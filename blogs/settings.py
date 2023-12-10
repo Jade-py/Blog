@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv("DEBUG", default=False)
 
 ALLOWED_HOSTS = ['127.0.0.1', 'blog-phantasmagoria.azurewebsites.net', 'phantasmagoria.jadepy.tech']
 
@@ -85,6 +85,9 @@ DATABASES = {
         'HOST': os.getenv('AZURE_MYSQL_HOST'),
         'OPTIONS': {
             'charset': 'utf8mb4',
+            'ssl': {
+                'key': BASE_DIR / 'DigiCertGlobalRootCA.crt.pem'
+            }
         },
     }
 }
