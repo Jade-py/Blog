@@ -8,7 +8,6 @@ env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -16,10 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv("DEBUG", False) == 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1', 'blog-phantasmagoria.azurewebsites.net', 'phantasmagoria.jadepy.tech', '.vercel.app']
-
 
 # Application definition
 
@@ -71,7 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blogs.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS =['https://blog-phantasmagoria.azurewebsites.net', 'https://phantasmagoria.jadepy.tech']
+CSRF_TRUSTED_ORIGINS = ['https://blog-phantasmagoria.azurewebsites.net', 'https://phantasmagoria.jadepy.tech']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -79,11 +77,11 @@ CSRF_TRUSTED_ORIGINS =['https://blog-phantasmagoria.azurewebsites.net', 'https:/
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('AZURE_MYSQL_NAME'),
-        'USER': os.getenv('AZURE_MYSQL_USER'),
-        'PASSWORD': os.getenv('AZURE_MYSQL_PASSWORD'),
-        'HOST': os.getenv('AZURE_MYSQL_HOST'),
-        'PORT': os.getenv('AZURE_MYSQL_PORT'),
+        'NAME': os.getenv('MYSQL_NAME'),
+        'USER': os.getenv('MYSQL_USER'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': os.getenv('MYSQL_HOST'),
+        'PORT': os.getenv('MYSQL_PORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',
             'ssl': {
@@ -113,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -124,7 +121,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
