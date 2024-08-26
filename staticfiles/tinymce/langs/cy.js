@@ -444,7 +444,7 @@ tinymce.addI18n('cy',{
 "Checklist": "Rhestr wirio",
 "Anchor": "Angor",
 "Special character": "Nod arbennig",
-"Color": "Lliw",
+"Color": "Lliw",z
 "Document properties": "Priodweddau'r ddogfen",
 "Image description": "Disgrifiad y ddelwedd",
 "Image": "Delwedd",
