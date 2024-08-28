@@ -26,6 +26,6 @@ class Comments(models.Model):
     date_commented = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return self.pk
+        return str(self.pk)
 
 # Create your models here.

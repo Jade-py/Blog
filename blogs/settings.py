@@ -1,4 +1,5 @@
 import os
+import sys
 import pymysql
 from pathlib import Path
 from environs import Env
@@ -91,6 +92,18 @@ DATABASES = {
     }
 }
 
+# Changes database based on environment
+# Production database did not allow creation of a new test database so I use local database to run tests
+if 'test' in sys.argv or 'prod' in sys.argv or 'dev' in sys.argv or 'test_coverage' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+    DATABASES['default']['NAME'] = os.getenv('MYSQL_TEST_NAME')
+    DATABASES['default']['USER'] = os.getenv('MYSQL_TEST_USER')
+    DATABASES['default']['PASSWORD'] = os.getenv('MYSQL_TEST_PASSWORD')
+    DATABASES['default']['HOST'] = os.getenv('MYSQL_TEST_HOST')
+    DATABASES['default']['PORT'] = os.getenv('MYSQL_PORT')
+
+
+# Mysqlclient drivers were buggy
 pymysql.install_as_MySQLdb()
 
 # Password validation

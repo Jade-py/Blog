@@ -19,3 +19,13 @@
 2. **Creating a Blog**: After signing in, navigate to the "Create Blog" section to write and publish your post.
 3. **Interacting**: Logged-in users can comment on blogs and delete their own posts.
 4. **Password Recovery**: Use the "Forgot Password" feature if you need to reset your account password.
+
+## Gallery
+![Home](home.png)
+- Landing Page
+---
+![Dashboard](dashboard.png)
+- User Dashboard
+---
+![Blog](blog.png)
+- Blog
