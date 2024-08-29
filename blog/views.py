@@ -85,7 +85,7 @@ class blog_post(DetailView):
                 comment.save()
 
                 body = f"Dear {post.author.username},\n\nSomeone has commented on your blog post titled '{post.title}'.\n\nYou can reply to this comment or view the post by clicking here: {self.request.build_absolute_uri(reverse('blog', kwargs={'slug': post.slug}))}\n\nBest regards,\nThe Phantasmagoria"
-                receiver_email = request.user.email
+                receiver_email = post.author.email
                 message = MIMEMultipart()
                 message["From"] = sender_email
                 message["To"] = receiver_email

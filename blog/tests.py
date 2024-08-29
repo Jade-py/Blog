@@ -1,4 +1,6 @@
 from django.test import TestCase, Client
+from unittest.mock import patch
+import os
 from django.contrib.auth import get_user_model
 from .models import Post, Comments
 from users.models import customUser
@@ -126,3 +128,52 @@ class BlogViewTests(TestCase):
         })
         self.assertEqual(response.status_code, 302)  # Redirect to login page
         self.assertFalse(Comments.objects.filter(comment='This comment should not be saved').exists())
+
+    @patch('smtplib.SMTP')
+    def test_mail_sent_on_comment(self, mock_smtp):
+        # Set up the mock
+        mock_server = mock_smtp.return_value.__enter__.return_value
+
+        # Log in the user
+        self.client.login(username='testuser', password='12345')
+
+        # Create a post by another user
+        other_user = get_user_model().objects.create_user(
+            username='otheruser',
+            password='12345',
+            email='otheruser@example.com'
+        )
+        post = Post.objects.create(
+            title='Other User Post',
+            body='This is a post by another user',
+            author=other_user,
+            slug=slugify('Other User Post')
+        )
+
+        # Post a comment
+        response = self.client.post(reverse('blog', kwargs={'slug': post.slug}), {
+            'comment': 'This is a test comment'
+        })
+
+        # Check that the comment was saved
+        self.assertTrue(Comments.objects.filter(post_pk=post, comment='This is a test comment').exists())
+
+        # Check that an email was "sent"
+        self.assertTrue(mock_server.send_message.called)
+
+        # Print email details for debugging
+        call_args = mock_server.send_message.call_args
+        email_msg = call_args[0][0]
+        print("From:", email_msg['From'])
+        print("To:", email_msg['To'])
+        print("Subject:", email_msg['Subject'])
+        print("Body:", email_msg.get_payload())
+
+        # Assertions
+        self.assertEqual(email_msg['From'], os.environ.get('DEFAULT_FROM_EMAIL'))
+        self.assertEqual(email_msg['To'], 'otheruser@example.com')
+        self.assertIn('New comment on your blog post!', email_msg.get_payload())
+        self.assertIn('Other User Post', email_msg.get_payload())
+
+        # Check the response
+        self.assertEqual(response.status_code, 302)  # Redirect after comment
